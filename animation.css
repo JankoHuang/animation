@@ -1,0 +1,92 @@
+body{
+    background-color: black;
+}
+.ball-box{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -150px 0 0 -150px;
+    perspective-origin: 50% 50%;
+    perspective: 3000px;
+}
+.ball-box2{
+    left: 20%;
+    transform: rotateZ(-30deg);
+}
+.ball-box3{
+    left: 80%;
+    transform: rotateZ(30deg);
+    height: 200px;
+}
+.ball-box4{
+    top: 65%;
+    height: 100px;
+}
+@-webkit-keyframes rotate3d {
+    0%{transform:  rotateY(0deg);}
+    100%{transform:  rotateY(360deg);}
+}
+@-moz-keyframes rotate3d {
+    0%{transform:  rotateY(0deg);}
+    100%{transform:  rotateY(360deg);}
+}
+@-o-keyframes rotate3d {
+    0%{transform:  rotateY(0deg);}
+    100%{transform:  rotateY(360deg);}
+}
+.ball{
+    height: 100%;
+    transform-style: preserve-3d;
+    -webkit-animation:rotate3d 7s infinite linear;
+    -o-animation:totate3d 7s infinite linear;
+    -moz-animation: rotate3d 7s infinite linear;
+}
+.ball:after{
+    content: "";
+    width: 5px;
+    height: 500px;
+    background-color: yellow;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateX(150px) translateY(-100px);
+    z-index: -1;
+}
+.ball-2:after{
+    background-color: red;
+}
+.ball-3:after{
+    background-color: cyan;
+}
+.ball-4:after{
+    background-color: yellow;
+    display: none;
+}
+.ball>div{
+    border: 5px solid white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: lightseagreen;
+}
+.ball-2>div{
+    background-color: #e4b9c0;
+    border-radius: 25%;
+}
+.ball-3>div{
+    background-color: #9b8ccd;
+    border-radius: 50%;
+}
+.ball-4>div{
+    background-color: yellowgreen;
+    border-radius: 50%;
+}
+.ball .line1{transform: rotateY(0deg);}
+.ball .line2{transform: rotateY(36deg);}
+.ball .line3{transform: rotateY(72deg);}
+.ball .line4{transform: rotateY(108deg);}
+.ball .line5{transform: rotateY(144deg);}
